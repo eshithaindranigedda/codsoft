@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing E-commerce</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-container input {
+            padding: 10px;
+            width: 50%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-container button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .search-container button:hover {
+            background-color: #555;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .category {
+            margin-bottom: 40px;
+        }
+        .category h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            color: #333;
+        }
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product {
+            flex: 1 1 calc(25% - 20px);
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .product h3 {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .product p {
+            font-size: 14px;
+            color: #666;
+        }
+        .product span {
+            display: block;
+            margin: 10px 0;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+        .product a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .product a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Clothing E-commerce</h1>
+    </div>
+
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search for products...">
+        <button onclick="searchProducts()">Search</button>
+    </div>
+
+    <div class="container">
+        <div class="category">
+            <h2>Men's Clothing</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuATur5l58SuuIIR9MjjKk9iIl5a6owHYMhA&s" alt="Men's T-shirt">
+                    <h3>Men's T-shirt</h3>
+                    <p>Comfortable cotton t-shirt.</p>
+                    <span>$19.99</span>
+                    <a href="#">Add to Cart</a>
+                </div>
+                <div class="product">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVU_Afes_j6smT0SKFTte4FFKt8iKKb05cxg&s" alt="Men's Jeans">
+                    <h3>Men's Jeans</h3>
+                    <p>Stylish denim jeans.</p>
+                    <span>$39.99</span>
+                    <a href="#">Add to Cart</a>
+                </div>
+                <!-- More products... -->
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Women's Clothing</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQelbOSilyrsNHCW-ej9k8UqpuRg-bJMj9Mzg&s" alt="Women's Dress">
+                    <h3>Women's Dress</h3>
+                    <p>Elegant evening dress.</p>
+                    <span>$49.99</span>
+                    <a href="#">Add to Cart</a>
+                </div>
+                <div class="product">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ75WHqifdAQ8udmiLeZGKAKx-vyNU21kTa_g&s" alt="Women's Blouse">
+                    <h3>Women's Blouse</h3>
+                    <p>Chic silk blouse.</p>
+                    <span>$29.99</span>
+                    <a href="#">Add to Cart</a>
+                </div>
+                <!-- More products... -->
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Kids' Clothing</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1O2v55ZVJiABT8qFn9ZgWVTNL6UE_t3UVuQ&s" alt="Kids' T-shirt">
+                    <h3>Kids' T-shirt</h3>
+                    <p>Cute cartoon t-shirt.</p>
+                    <span>$14.99</span>
+                    <a href="#">Add to Cart</a>
+                </div>
+                <div class="product">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_gUfcxaF8uW3ViZbRceRJfehk1OzmqaF4qg&s" alt="Kids' Shorts">
+                    <h3>Kids' Shorts</h3>
+                    <p>Comfortable cotton shorts.</p>
+                    <span>$12.99</span>
+                    <a href="#">Add to Cart</a>
+                </div>
+                <!-- More products... -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function searchProducts() {
+            let query = document.getElementById('search-bar').value.toLowerCase();
+            let products = document.querySelectorAll('.product');
+            products.forEach(product => {
+                let productName = product.querySelector('h3').textContent.toLowerCase();
+                if (productName.includes(query)) {
+                    product.style.display = '';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
